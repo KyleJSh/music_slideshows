@@ -110,7 +110,7 @@ p {
 
 .slide-b .content-b {
   position: absolute;
-  left: -400px;
+  right: -400px;
   bottom: 10px;
   width: 400px;
   background: rgba(255, 255, 255, 0.5);
@@ -118,20 +118,20 @@ p {
 }
 
 .slide-b.current-b .content-b {
-  transform: translateX(400px);
+  transform: translateX(-400px);
   transition: all 0.7s ease-in-out 0.4s;
 }
 
 .buttons-b #prev-b {
   position: absolute;
   bottom: 25%;
-  left: 2rem;
+  left: 1.2rem;
 }
 
 .buttons-b #next-b {
   position: absolute;
   bottom: 25%;
-  right: 2rem;
+  right: 1.2rem;
 }
 
 .buttons-b button {
@@ -147,8 +147,16 @@ p {
 }
 
 @media (max-width: 600px) {
-  .slide-b.current-b .content-b {
+  .slide-b .content-b {
+    bottom: -300px;
+    left: 0;
     width: 100%;
+
+  }
+  .slide-b.current-b .content-b {
+    transform: translateY(-300px);
+    width: 100%;
+    transition: all 0.7s ease-in-out 0.4s;
   }
 }
 

@@ -4,6 +4,10 @@ const slideTop = document.querySelectorAll('.slide-a');
 const prevBtnTop = document.querySelector('#prev-a');
 const nextBtnTop = document.querySelector('#next-a');
 
+const auto = true;
+const intervalTime = 5000;
+let slideInterval;
+
 const nextSlideTop = () => {
   currentTop = document.querySelector('.current-a');
   currentTop.classList.remove('current-a')
@@ -12,6 +16,7 @@ const nextSlideTop = () => {
   } else {
     slideTop[0].classList.add('current-a');
   }
+  setTimeout(() => currentTop.classList.remove('current-a'));
 }
 
 const prevSlideTop= () => {
@@ -22,6 +27,7 @@ const prevSlideTop= () => {
   } else {
     slideTop[slideTop.length - 1].classList.add('current-a');
   }
+  setTimeout(() => currentTop.classList.remove('current-a'));
 }
 
 nextBtnTop.addEventListener('click', e => {
@@ -31,7 +37,6 @@ nextBtnTop.addEventListener('click', e => {
 prevBtnTop.addEventListener('click', e => {
   prevSlideTop();
 });
-
 
 
 // Bottom Slides
@@ -47,6 +52,7 @@ const nextSlideBottom = () => {
   } else {
     slideBottom[0].classList.add('current-b');
   }
+  setTimeout(() => currentBottom.classList.remove('current-b'));
 }
 
 const prevSlideBottom= () => {
@@ -57,6 +63,7 @@ const prevSlideBottom= () => {
   } else {
     slideBottom[slideBottom.length - 1].classList.add('current-b');
   }
+  setTimeout(() => currentBottom.classList.remove('current-b'));
 }
 
 nextBtnBottom.addEventListener('click', e => {
@@ -66,3 +73,12 @@ nextBtnBottom.addEventListener('click', e => {
 prevBtnBottom.addEventListener('click', e => {
   prevSlideBottom();
 });
+
+
+if(auto) {
+  slideInterval = setInterval(nextSlideTop, intervalTime);
+};
+
+if(auto) {
+  slideInterval = setInterval(nextSlideBottom, intervalTime);
+};
