@@ -1,5 +1,5 @@
 # 2 Music Themed Slideshows
-## Press the prev and next buttons to bring on the next slide.
+## Click the prev and next buttons to slide through the images.
 ![Screenshot 1](/images/screenshot1.png)
 
 ![Screenshot 2](/images/screenshot2.png)
