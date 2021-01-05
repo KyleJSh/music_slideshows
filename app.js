@@ -6,6 +6,7 @@ const nextBtnTop = document.querySelector('#next-a');
 
 const auto = true;
 const intervalTime = 5000;
+const intervalTimeB = 4000;
 let slideInterval;
 
 const nextSlideTop = () => {
@@ -80,5 +81,5 @@ if(auto) {
 };
 
 if(auto) {
-  slideInterval = setInterval(nextSlideBottom, intervalTime);
+  slideInterval = setInterval(nextSlideBottom, intervalTimeB);
 };
